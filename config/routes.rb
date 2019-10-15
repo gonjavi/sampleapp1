@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   resources :users
   get '/signup',      to: 'users#new', as: 'signup'
   get 'foo/bar'
@@ -9,5 +10,8 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   get  '/home',    to: 'static_pages#home'
   post '/signup',  to: 'users#create'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
   resources :users
 end
