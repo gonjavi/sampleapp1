@@ -5,6 +5,8 @@ ruby '2.6.3'
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'popper_js', '~> 1.14.5'
+
 gem 'rails-ujs', '~> 0.1.0'
 
 gem 'turbolinks', '~> 5'
