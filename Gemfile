@@ -3,9 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 gem 'faker'
+gem 'rubocop-faker'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
+
 
 gem 'bcrypt', '~> 3.1.7'
 
@@ -29,6 +33,7 @@ end
 
 group :production do 
   gem 'pg'
+  gem 'fog', '1.42'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
